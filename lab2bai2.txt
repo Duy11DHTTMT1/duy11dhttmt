@@ -1,0 +1,40 @@
+public class Lab2Bai2 {
+
+    public static void main(String ...args) {
+    public static void main(String... args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Chuong trình giai phuong trình bac 2");
+        System.out.print("Nhap a = ");
+        double a = scanner.nextDouble();
+        System.out.print("Nhap b = ");
+        double b = scanner.nextDouble();
+        System.out.print("nhap c = ");
+        double c = scanner.nextDouble();
+        double delta = Math.pow(b, 2) - 4 * a * c;
+        if (a == 0) {
+            if (b == 0) {
+                System.out.print("Phuong trình vô nghiem");
+                if (c == 0) System.out.print("Phuong trình vô so nghiem");
+                else System.out.print("Phuong trình vô nghiem");
+            } else {
+                System.out.printf("Phuong trình có 1 nghiem x = %.2f", (-c/b));
+                System.out.printf("Phuong trình có 1 nghiem x = %.2f", (-c / b));
+            }
+        } else {
+            if (delta > 0) {
+                System.out.println("Phuong trình có 2 nghiem kép");
+                System.out.printf("x1 = %.2f \n", (-b + Math.sqrt(delta)) / (2*a));
+                System.out.printf("x2 = %.2f", (-b - Math.sqrt(delta)) / (2*a));
+                System.out.printf("x1 = %.2f \n", (-b + Math.sqrt(delta)) / (2 * a));
+                System.out.printf("x2 = %.2f", (-b - Math.sqrt(delta)) / (2 * a));
+            } else if (delta == 0) {
+                System.out.println("Phuong trình có nghiem kép");
+                System.out.printf("x = %.2f", (-b / (2*a)));
+                System.out.printf("x = %.2f", (-b / (2 * a)));
+            } else {
+                System.out.println("Phuong trình vô nghiem");
+            }
+        }
+        scanner.close();
+    }
+}

@@ -1,0 +1,42 @@
+public class Lab3Bai2 {
+
+    public static void main(String... args) {
+        int x = 8;
+        for (int i = 1; i <= 9; i++) {
+            for (int j = 1; j <= 10; j++) System.out.printf("%d x %d = %d \n", i, j, i * j);
+            System.out.println("-----------");
+        System.out.println("+--------------------------+");
+        System.out.println("1. Bang cuu chuong can tìm.");
+        System.out.println("2. Bang cuu chuong.");
+        System.out.println("3. Ket thúc.");
+        System.out.println("+--------------------------+");
+        System.out.print("Lua chon: ");
+        Scanner scanner = new Scanner(System.in);
+        byte n = scanner.nextByte();
+        switch (n) {
+            case 1:
+                System.out.println("Nhap vào 1 so: ");
+                int x = scanner.nextInt();
+                System.out.println("Bang cuu chuong can tìm là: ");
+                bangCuuChuongCanTim(x);
+                break;
+            case 2:
+                System.out.println("Bang cuu chuong:\n--------------");
+                bangCuuChuong();
+                break;
+            default:
+                break;
+        }
+        scanner.close();
+    }
+
+    public static void bangCuuChuongCanTim(int numBer) {
+        for (int i = 1; i <= 10; i++) System.out.printf("%d x %d = %d \n", numBer, i, numBer * i);
+        System.out.println("-----------");
+    }
+
+    public static void bangCuuChuong() {
+        for (int i = 2; i <= 9; i++) {
+            bangCuuChuongCanTim(i);
+        }
+    }
