@@ -1,16 +1,16 @@
 public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("TÌnh chu vi, di?n tÌch hÏnh ch? nh?t!");
-        System.out.print("Nh?p v‡o chi?u d‡i: ");
+        System.out.println("T√≠nh chu vi, dien t√≠ch h√¨nh chu nhat!");
+        System.out.print("Nhap v√†o chieu d√†i: ");
         double dai = scanner.nextDouble();
-        System.out.print("Nh?p v‡o chi?u r?ng: ");
+        System.out.print("Nhap v√†o chieu rong: ");
         double rong = scanner.nextDouble();
         double chiVi = (dai + rong) * 2;
         double dienTich = dai * rong;
         double min = Math.min(dai, rong);
         System.out.println("Chu vi = " + chiVi);
-        System.out.printf("Di?n tÌch = %.2f\n", dienTich);
-        System.out.println("C?nh nh? nh?t = " + min);
+        System.out.printf("Dien t√≠ch = %.2f\n", dienTich);
+        System.out.println("Canh nho nhat = " + min);
         scanner.close();
     }
 }
